@@ -1,8 +1,9 @@
 const express = require('express')
 const app = express()
 var cors = require('cors')
+var router = express.Router();
 // var bodyParser = require('body-parser')
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || '3000'
 
 
 // all routes
@@ -28,6 +29,7 @@ app.use(cors())
 
 //database connection
 const db = require('./database/db');
+const exp = require('constants')
 db()
 // app.use(function (req, res, next) {
 // res.header("Access-Control-Allow-Headers", "*")
